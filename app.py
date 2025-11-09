@@ -102,8 +102,7 @@ else:
     print("Flask server starting. API Key confirmed.")
     client = genai.Client(api_key=API_KEY)
 
-
-@app.route('/generate_quiz', methods=['POST'])
+@app.route('/generate_quiz', methods=['GET', 'POST'])
 def generate_quiz():
     """Client (App) se JSON input lekar AI content generate karta hai."""
     
